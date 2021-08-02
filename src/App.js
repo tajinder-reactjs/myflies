@@ -8,6 +8,7 @@ import "./style.scss";
 class App extends PureComponent {
   state = {
     grid,
+    value: 1,
   };
   valueRenderer = (cell) => cell.value;
   onCellsChanged = (changes) => {
@@ -18,22 +19,37 @@ class App extends PureComponent {
     });
     this.setState({ grid });
   };
-  addRow = () => {
-    const { grid } = this.state;
-    
-    const singleRow = [
-      { readOnly: true, value: 2 + 1 },
-      { value: "56" },
-      { value: "56" },
-      { value: "56" },
-      { value: "56" },
-      { value: "56" },
-    ];
 
-    grid.push(singleRow);
+  /**
+   * Add Row
+   */
+  addRow = () => {
+    const { grid, value } = this.state;
+    const [headers] = grid;
+
+    const rowIndexCell = { readOnly: true };
+    const row = [];
+
+    headers.map((cell, index) => {
+      // update rowIndexCell
+      if (index === 0) {
+        this.setState({ value: value + 1 });
+
+        row.push({ ...rowIndexCell, value });
+        return row;
+      }
+
+      row.push({ cell });
+      return row;
+    });
+    grid.push(row);
 
     this.setState({ grid: [...grid] });
   };
+
+  /**
+   * Add column
+   */
   addcolumn = () => {
     let { grid } = this.state;
     const headers = { value: "column", readOnly: true };
