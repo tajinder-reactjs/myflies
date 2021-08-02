@@ -1,0 +1,222 @@
+.MuiBox-root {
+  .data-grid-container {
+    .data-grid {
+      .data-body {
+        .cell {
+          min-height: 32px;
+          padding: 4px 15px;
+
+          line-height: 21px;
+        }
+      }
+      .cell {
+        text-align: left;
+
+        border-top-color: #dddddd;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #dddddd;
+        &.header-cell {
+          background-color: #f3f3f3;
+          box-shadow: none;
+        }
+        &.selected {
+          background-color: #f3f3f3 !important;
+          box-shadow: none;
+        }
+        &.readonly-color {
+          background-color: rgba(0, 0, 0, 0.09);
+        }
+        &.row-use-as-heading {
+          background-color: transparent !important;
+          &.selected {
+            background-color: #f3f3f3 !important;
+          }
+        }
+        .data-editor {
+          padding: 0;
+
+          font-size: 14px;
+          font-family: Roboto;
+          text-align: left;
+          color: #000000;
+        }
+      }
+      .data-header,
+      .data-body {
+        .cell {
+          &:last-child {
+            border-right: 1px solid #dddddd;
+          }
+        }
+      }
+      .data-row {
+        &:last-child {
+          .cell {
+            border-bottom: 1px solid #dddddd;
+          }
+        }
+      }
+      .value-viewer {
+        overflow: hidden;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.theme-dark {
+  .MuiBox-root {
+    .data-grid-container {
+      .data-grid {
+        .data-body {
+          .cell {
+            background-color: #1e1e1e;
+            &.forecast-color {
+              background-color: #1f3734;
+            }
+          }
+          .highlight {
+            background-color: #1b2524;
+          }
+          .highlight-selected {
+            border: 1px solid #018786;
+          }
+          .highlight-top {
+            border-top-color: #018786;
+          }
+          .highlight-left {
+            border-left-color: #018786;
+          }
+          .highlight-bottom {
+            border-bottom-color: #018786;
+          }
+          .highlight-right {
+            border-right-color: #018786;
+          }
+        }
+      }
+    }
+  }
+}
+
+.theme-yellow {
+  .MuiBox-root {
+    .data-grid-container {
+      .data-grid {
+        .data-body {
+          .cell {
+            background-color: #25262c;
+            &.forecast-color {
+              background-color: #413a1f;
+            }
+          }
+          .highlight {
+            background-color: rgba(255,192,1,0.07);
+          }
+          .highlight-selected {
+            border: 1px solid rgba(255,192,1,0.6);
+          }
+          .highlight-top {
+            border-top-color: rgba(255,192,1,0.6);
+          }
+          .highlight-left {
+            border-left-color: rgba(255,192,1,0.6);
+          }
+          .highlight-bottom {
+            border-bottom-color: rgba(255,192,1,0.6);
+          }
+          .highlight-right {
+            border-right-color: rgba(255,192,1,0.6);
+          }
+        }
+      }
+    }
+  }
+}
+
+.theme-light {
+  .MuiBox-root {
+    .data-grid-container {
+      .data-grid {
+        .data-body {
+          .cell {
+            background-color: #ffffff;
+            &.forecast-color {
+              background-color: #dcefff;
+            }
+          }
+          .highlight {
+            background-color: #f4faff;
+          }
+          .highlight-selected {
+            border: 1px solid #41aefc;
+          }
+          .highlight-top {
+            border-top-color: #41aefc;
+          }
+          .highlight-left {
+            border-left-color: #41aefc;
+          }
+          .highlight-bottom {
+            border-bottom-color: #41aefc;
+          }
+          .highlight-right {
+            border-right-color: #41aefc;
+          }
+        }
+      }
+    }
+  }
+}
+.theme-dark,
+.theme-yellow {
+  .MuiBox-root {
+    .data-grid-container {
+      .data-grid {
+        .cell {
+          border-top-color: rgba(255, 255, 255, 0.12);
+          border-left-color: rgba(255, 255, 255, 0.12);
+          &.header-cell {
+            background-color: #131313;
+          }
+          &.selected {
+            background-color: #131313 !important;
+          }
+          &.forecast-color {
+            background-color: #1f3734;
+          }
+          &.readonly-color {
+            background-color: rgba(255, 255, 255, 0.09);
+          }
+          &.row-use-as-heading {
+            background-color: transparent !important;
+            &.selected {
+              background-color: #131313 !important;
+            }
+          }
+          .data-editor {
+            color: #ffffff;
+          }
+        }
+        .data-header,
+        .data-body {
+          .cell {
+            &:last-child {
+              border-right: 1px solid rgba(255, 255, 255, 0.12);
+            }
+          }
+        }
+        .data-row {
+          &:last-child {
+            .cell {
+              border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            }
+          }
+        }
+      }
+    }
+  }
+}
